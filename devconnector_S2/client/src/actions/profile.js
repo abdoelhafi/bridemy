@@ -140,7 +140,6 @@ export const addEducation = (formData,history) => async dispatch => {
                 'Content_Type':'application/json'
             }
         }
-        console.log(formData+"here is it ");
         const res = await axios.put('/api/profile/education',formData,config );
         console.log(res+"here is it ");
         dispatch({

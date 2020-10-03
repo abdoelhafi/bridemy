@@ -15,7 +15,7 @@ export const loadUser = () => async dispatch =>{
             payload: res.data
         });
         
-    } catch (err) {
+    } catch (err) { 
         dispatch({
             type:AUTH_ERROR
         })
