@@ -8,15 +8,15 @@ const CommentForm = ({postId,addComment}) => {
     const [text,setText] =useState('');
     return (
         <div className="post-form">
-        <div className="bg-primary p">
+        {/* <div className="bg-primary p">
           <h3> Commenter à cette publication... </h3>
-        </div>
+        </div> */}
         <form className="form my-1" onSubmit={e => {e.preventDefault(); addComment(postId,{text}) ; setText('');}}>
           <textarea
             name="text"
             cols="30"
-            rows="5"
-            placeholder="Commenter ici"
+            rows="1"
+            placeholder="reply to this post"
             value={text}
             onChange={e => setText(e.target.value) }
             required>

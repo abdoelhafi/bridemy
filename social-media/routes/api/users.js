@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 const { check, validationResult } =require('express-validator');
 const config = require('../../config/keys');
 const User = require('../../models/User');
+// const axio = require('axios')
 
 // @route   POST api/users
 // @desc    Tests users route
@@ -25,6 +26,9 @@ router.post('/',[
     //see if the user exist 
     const {name,email,password} = req.body ;
     try{
+        // const unsplash = await fetch("https://api.unsplash.com/photos/random/?client_id=R9AJtiUAno7L3s0nPRPAsHQ9i7ezOQ9SHIxf0VvdL0E");
+        // const avatar = unsplash.user.profile_image.large;
+        global.alert(avatar);
         console.log("fetching user");
         let user = await  User.findOne({email : email});
         if(user){

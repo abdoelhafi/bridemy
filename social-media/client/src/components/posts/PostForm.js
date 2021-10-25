@@ -8,25 +8,22 @@ const PostForm = ({addPost}) => {
 
     return (
         <div>
-        <h1 class="large text-primary">
-      Discussion
-      </h1>
 
       <div className="post-form">
-        <div className="bg-primary p">
-          <h3>Poser toutes vos questions ...</h3>
-        </div>
+        {/* <div className="bg-primary p">
+          <h3>Share and Ask ...</h3>
+        </div> */}
         <form className="form my-1" onSubmit={e => {e.preventDefault(); addPost({text}) ; setText('');}}>
           <textarea
             name="text"
             cols="30"
-            rows="5"
-            placeholder="Créer une publication"
+            rows="1"
+            placeholder="what's on your mind, share it now"
             value={text}
             onChange={e => setText(e.target.value) }
             required>
             </textarea>
-          <input type="submit"   className="btn btn-dark my-1" value="Créer" />
+          <input type="submit"   className="btn btn-dark my-1" value="share" />
         </form>
       </div>
       </div>
